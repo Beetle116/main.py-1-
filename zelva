@@ -1,0 +1,27 @@
+import pygame
+
+# Připravíme PyGame
+pygame.init()
+pygame.display.set_caption(".....")
+velikost = (500, 500)
+obrazovka = pygame.display.set_mode(velikost)
+cas = pygame.time.Clock()
+
+# Připravíme si obrázek
+background = (140, 200, 110)
+zelva = pygame.image.load("zelvazhora.png")
+zelva = pygame.transform.scale(zelva, (40, 40))
+
+WIDTCH = 3
+HEIGHT = 4
+
+while True:
+    # Vykreslíme
+    obrazovka.fill(background)
+    for x in range[WIDTCH]:
+        for y in range [HEIGHT]
+          obrazovka.blit(zelva, (x * 40, 0))
+          rect = [x * 45, y * 45, 40, 40]
+          pygame.draw.rect[obrazovka, barva, rect]
+    pygame.display.update()
+    cas.tick(30)
